@@ -19,6 +19,7 @@ export default function LoadingScreen(){
       <Text>
         Loading.................!
         rsadfkl;jahsdfjsakldjfklasdjf
+        jsadhflkjhsadlkjfhsdaljkfhasdjlk
         {/* 주석 달았음 */}
       </Text>
     </Wrapper>

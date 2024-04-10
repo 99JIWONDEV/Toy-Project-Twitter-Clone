@@ -50,6 +50,9 @@ const router = createBrowserRouter([
 ]);
 
 const GlobalStyles = createGlobalStyle`
+::-webkit-scrollbar {
+display:none;
+}
   ${reset};
   * {
     box-sizing: border-box;
@@ -66,6 +69,7 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
+  margin-right: 40px;
 `;
 
 function App() {

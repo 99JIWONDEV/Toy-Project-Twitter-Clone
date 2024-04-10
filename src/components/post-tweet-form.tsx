@@ -78,7 +78,7 @@ export default function PostTweetForm() {
     if(!user || isLoading || tweet == "" || tweet.length >180) return;
     try{
       setLoading(true)
-      const doc = await addDoc(collection(db, "tweet"),{
+      const doc = await addDoc(collection(db, "tweets"),{
         tweet,
         createdAt: Date.now(),
         username: user.displayName || "익명",
@@ -87,7 +87,7 @@ export default function PostTweetForm() {
       if(file){
         const locationRef = ref(storage, `tweets/${user.uid}-${user.displayName}/${doc.id}`)
         const result = await uploadBytes(locationRef, file)
-        const url = getDownloadURL(result.ref)
+        const url = await getDownloadURL(result.ref)
         await updateDoc(doc, {
           photo: url,
         })

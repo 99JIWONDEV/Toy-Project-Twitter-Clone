@@ -30,7 +30,7 @@ export const Input = styled.input`
   font-size: 16px;
   &[type="submit"]{
     cursor: pointer;
-    background-color: #1d9bf0;
+    background-color: #ff8db1;
     &:hover{
       opacity: 0.8;
     }
@@ -46,7 +46,7 @@ export const Error  = styled.span`
 export const Switcher = styled.span`
   margin-top: 20px;
   a {
-    color: #1d9bf0;
+    color: #ff8db1;
   }
 `
 export const Password = styled.span`

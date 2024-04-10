@@ -50,16 +50,16 @@ export default function CreateAccount() {
   };
   return (
     <Wrapper>
-      <Title>Join 𝕏</Title>
+      <Title>회원가입</Title>
       <Form onSubmit={onSubmit}>
-        <Input onChange={onChange} name="name" value={name} placeholder="Name" type="text" required />
-        <Input onChange={onChange} name="email" value={email} placeholder="Email" type="email" required />
-        <Input onChange={onChange} name="password" value={password} placeholder="Password" type="password" required />
-        <Input onChange={onChange} type="submit" value={isLoading ? "Loading..." : "Create Account"} />
+        <Input onChange={onChange} name="name" value={name} placeholder="이름" type="text" required />
+        <Input onChange={onChange} name="email" value={email} placeholder="이메일" type="email" required />
+        <Input onChange={onChange} name="password" value={password} placeholder="비밀번호" type="password" required />
+        <Input onChange={onChange} type="submit" value={isLoading ? "Loading..." : "계정 만들기"} />
       </Form>
       {error !== "" ? <Error>{error}</Error> : null}
       <Switcher>
-        계정이 있으신가요?{" "}  <Link to="/login">Log in &rarr; </Link>
+        계정이 있으신가요?{" "}  <Link to="/login">로그인 &rarr; </Link>
       </Switcher>
       <GithubButton/>
     </Wrapper>

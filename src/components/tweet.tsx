@@ -106,7 +106,7 @@ export default function Tweet({ username, photo, tweet, userId, id }: ITweet) {
       {isEditing && (
         <div>
           <textarea value={editedTweet} onChange={(event) => setEditedTweet(event.target.value)} style={{ width: "100%", minHeight: "100px", margin: "10px 0", backgroundColor: "black", color: "white", fontSize: "18px", padding: "5px" }} />
-          <button onClick={onEdit} style={{ backgroundColor: "#1d9bf0", color: "white", border: "none", borderRadius: "5px", fontSize: "12px", fontWeight: "600", padding: "5px 10px", cursor: "pointer" }}>
+          <button onClick={onEdit} style={{ backgroundColor: "#ff8db1", color: "white", border: "none", borderRadius: "5px", fontSize: "12px", fontWeight: "600", padding: "5px 10px", cursor: "pointer" }}>
             저장
           </button>
           <button onClick={() => setIsEdting(false)} style={{ backgroundColor: "grey", color: "white", border: "none", borderRadius: "5px", fontSize: "12px", fontWeight: "600", padding: "5px 10px", cursor: "pointer", marginLeft:" 15px" }}>

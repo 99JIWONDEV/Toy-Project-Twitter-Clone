@@ -24,15 +24,15 @@ const TextArea = styled.textarea`
   }
   &:focus{
     outline: none;
-    border-color: #1d9bf0;
+    border-color: #ff8db1;
   }
 `
 const AttachFileButton = styled.label`
   padding: 10px 0px;
-  color: #1d9bf0;
+  color: #ff8db1;
   text-align: center;
   border-radius: 20px;
-  border: 1px solid #1d9bf0;
+  border: 1px solid #ff8db1;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -41,7 +41,7 @@ const AttachFileInput = styled.input`
   display: none;
 `
 const SubmitBtn = styled.input`
-  background-color: #1d9bf0;
+  background-color: #ff8db1;
   color: white;
   border: none;
   padding: 10px 0px;
@@ -104,7 +104,7 @@ export default function PostTweetForm() {
 
   return(
     <Form onSubmit={onSubmit}>
-      <TextArea required rows={5} maxLength={180} onChange={onChange} value={tweet} placeholder="하고 싶은 말이 있나요?" />
+      <TextArea required rows={5} maxLength={180} onChange={onChange} value={tweet} placeholder="지원에게 하고 싶은 말이 있나요?" />
       <AttachFileButton htmlFor="file">{file ? "사진이 선택되었습니다 ✅" : "사진을 올려보세요"}</AttachFileButton>
       <AttachFileInput onChange={onFileChange} type="file" id="file" accept="image/*" />
       <SubmitBtn type="submit" value={isLoading ?"업로드 중" : "글 올리기"}/>

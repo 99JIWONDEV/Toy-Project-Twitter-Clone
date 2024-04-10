@@ -50,10 +50,10 @@ export default function Login() {
   }
   return (
     <Wrapper>
-      <Title>Log into 𝕏</Title>
+      <Title>지원에게 말해줘!</Title>
       <Form onSubmit={onSubmit}>
-        <Input onChange={onChange} name="email" value={email} placeholder="Email" type="email" required />
-        <Input onChange={onChange} name="password" value={password} placeholder="Password" type="password" required />
+        <Input onChange={onChange} name="email" value={email} placeholder="이메일" type="email" required />
+        <Input onChange={onChange} name="password" value={password} placeholder="비밀번호" type="password" required />
         <Input onChange={onChange} type="submit" value={isLoading ? "Loading..." : "Login"} />
       </Form>
       {error !== "" ? <Error>{error}</Error> : null}
